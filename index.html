@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1 style="color: white;float: left; margin-left: 50px; margin-top: 30px;">HILKIA STORE</h1>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li><a style="color: white;" href="index1.php">Nama Makanan</a></li>
+				<li><a style="color: white;">Makanan Dibeli</a></li>
+				<li><a style="color: white;">Information</a></li>
+				<li><a style="color: white;" href="profil.php">Profil</a></li>
+			</ul>
+		</div>
+	</header>
+	<section class="nav">
+		<div></div>
+	</section>
+
+
+	<section>
+			<img src="./img/background.png" class="gambar1">
+		<div>
+			<a class="judul2" data-aos="fade-right" style="position: absolute; top: 200px; z-index: 3; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">SELAMAT DATANG DI HILKIA STORE</a>
+			<p class="keterangan"data-aos="fade-right" >Web ini adalah Web yang berfungsi untuk membeli<br>	 makanan atau minuman yang anda inginkan. <br>Dengan adanya web ini
+			anda dapat dengan mudah membeli <br>makanan atau minuman yang anda inginkan.<br>
+		Klik di bawah ini jika ingin informasi lebih lanjut</p>
+		</div>
+		<div>
+			<img id="arrows" src="./img/arrorw.gif">
+		</div>
+		<div>
+			<button id="tombol" onclick="tampilkan()"
+				style="position: absolute; height: 80px;width: 200px; z-index: 3; border: 1px solid; background-color: aliceblue; ">Klik
+				disini</button>
+		</div>
+		<div>
+			<img id="gmb_cola" src="./img/cola.png" alt="cola-hilkia" onmousedown="return false;"
+			onselectstart="return false;">
+			<img id="gmb_chetato" src="./img/chetato.png" alt="chetato-hilkia" onmousedown="return false;"
+			onselectstart="return false;">
+		</div>
+	</section>
+	<section class="section1">
+
+	</section>
+
+	<div>
+		<img id="gambar" src="./img/gambar.gif" alt="hilkia" onmousedown="return false;"
+		onselectstart="return false;">
+		<img id="gambar1" src="./img/tanya.png"
+			style="display:none; position: fixed; bottom: 80px; width: 300px; right: 30px;">
+		<button id="ApaSJ" onclick="book()"
+			style="display:none; position: fixed; bottom: 30px; right: 580px;background-color: aliceblue; border: 0.5px solid;	">Apa
+			saja makanan yang ada di sini?</button>
+		<button id="caraOP" onclick="op()"
+			style="display:none; position: fixed; bottom: 30px; right: 300px; background-color: aliceblue; border: 0.5px solid;">Gimana
+			cara mengoprasikan Web ini?</button>
+		<button id="INFO" onclick="Info()"
+			style="display:none; position: fixed; bottom: 30px; right: 190px; background-color: aliceblue; border: 0.5px solid; ">Informasi</button>
+		<button id="henti" onclick="hentii()"
+			style="display:none; position: fixed; bottom: 30px; right: 100px; background-color: aliceblue; border: 0.5px solid; ">Berhenti</button>
+	</div>
+
+	<footer>
+		<h1 class="txt-judul-footer">Kontak Kami</h1>
+		<div class="ass-footer"></div>
+		<div class="footer"></div>
+		<div class="ass-footbawah">
+			<a class="ass-footbawah-txt">Copyrigth 	&copy; 2023 HILKIA FARREL AZARIA</a>
+		</div>
+	</footer>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	  </script>
+	<script>
+		function tampilkan() {
+			var gambar = document.getElementById("gambar");
+			gambar.style.display = "block";
+			tombol.style.display = "none";
+			arrows.style.display = "none";
+
+			var suara = new Audio("smkn1.mp3");
+			suara.play();
+
+			suara.onended = function () {
+				gambar.style.display = "none";
+				caraOP.style.display = "block";
+				gambar1.style.display = "block";
+				INFO.style.display = "block";
+				ApaSJ.style.display = "block";
+				henti.style.display = "block";
+			};
+		}
+
+		function op() {
+			var gambar = document.getElementById("gambar");
+			gambar.style.display = "block";
+			INFO.style.display = "none";
+			caraOP.style.display = "none";
+			ApaSJ.style.display = "none";
+			gambar1.style.display = "none";
+
+			var musik = new Audio("smkn1.mp3");
+			musik.play();
+
+			musik.onended = function () {
+				gambar.style.display = "none";
+				caraOP.style.display = "block";
+				gambar1.style.display = "block";
+				INFO.style.display = "block";
+				ApaSJ.style.display = "block";
+			};
+		}
+
+		function book() {
+			var gambar = document.getElementById("gambar");
+			gambar.style.display = "block";
+			INFO.style.display = "none";
+			caraOP.style.display = "none";
+			ApaSJ.style.display = "none";
+			gambar1.style.display = "none";
+
+
+			var suara1 = new Audio("smkn1.mp3");
+			suara1.play();
+
+			suara1.onended = function () {
+				gambar.style.display = "none";
+				caraOP.style.display = "block";
+				gambar1.style.display = "block";
+				INFO.style.display = "block";
+				ApaSJ.style.display = "block";
+			};
+		}
+
+		function Info() {
+			var gambar = document.getElementById("gambar");
+			gambar.style.display = "block";
+			INFO.style.display = "none";
+			caraOP.style.display = "none";
+			ApaSJ.style.display = "none";
+			gambar1.style.display = "none";
+
+
+			var suara1 = new Audio("smkn1.mp3");
+			suara1.play();
+
+			suara1.onended = function () {
+				gambar.style.display = "none";
+				caraOP.style.display = "block";
+				gambar1.style.display = "block";
+				INFO.style.display = "block";
+				ApaSJ.style.display = "block";
+			};
+		}
+
+		function hentii() {
+			INFO.style.display = "none";
+			caraOP.style.display = "none";
+			ApaSJ.style.display = "none";
+			gambar1.style.display = "none";
+			henti.style.display = "none";
+			gmb_cola.style.display = "block";
+			gmb_chetato.style.display = "block";
+		}
+	</script>
+	<script type="text/javascript">
+		document.oncontextmenu = function () {
+			return false;
+		}
+	</script>
+</body>
+
+</html>

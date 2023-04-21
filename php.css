@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(t.gif) no-repeat;
+	background-size: cover;
+
+}
+
+.h{
+	color: white;
+	font-family: sans-serif;
+	margin-top: 155px;
+	padding: 10px;
+	border-bottom: 6px solid snow;
+	padding-left: 7px;
+}
+
+.u{
+    color: white;
+	font-family: sans-serif;
+	padding: 1px;
+	border-bottom: 1px solid snow;
+	
+
+}
+.v{
+	color: white;
+	font-family: sans-serif;
+	border-bottom: 1px solid snow;
+}
+
+.pl{
+	background: gainsboro;
+	display: flex;
+	width: 225%;
+	height: 24px;
+	border-radius: 5px;
+	border: none;
+
+}
+
+.lp{
+	background: gainsboro;
+	display: flex;
+	width: 225%;
+	height: 24px;
+	border-radius: 5px;
+	border: none;
+}
+
+.sub{
+	background: gainsboro;
+	color: black;
+	width: 225%;
+	height: 26px;
+	border-radius: 5px;
+	border: none;
+	text-transform: capitalize;
+}
