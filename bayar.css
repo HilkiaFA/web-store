@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+overflow-x: hidden;
+}
+header{
+    background-color: #014585;
+    width: 100%;
+    height: 100px;
+}
+.navbar{
+    float: right;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    display: inline-flex;
+    margin-right: 60px;
+    margin-top: 23px;
+}
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color:  #0f6fc7;
+}
+.ass-footer{
+    background-color: #ffd700;
+    width: 200px;
+    height: 1px;
+    position: relative;
+    top: 60px;
+    left: 100px;
+  }
+  .txt-judul-footer{
+    position: relative;
+    top: 58px;
+    right: -100px;
+    color: white;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  footer{
+    background-color: #014585;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer{
+    position: relative;
+    top: 300px;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+  }
+  .ass-footbawah{
+    background-color: #0f6fc7;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    top: 300px;
+  }
+  .ass-footbawah-txt{
+	position: relative;
+	font-size: 15px;
+	left: 120px;
+	top: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+}
+.bayar{
+  border: 1px solid;
+  width: 100%;
+  height: 400px;
+  margin: auto; 
+}
+.konten-bayar{
+  border: 1px solid;
+  width: 80%;
+  margin-top: 80px;
+  height: 250px;
+   max-height: 1000px; /* Ubah nilai ini sesuai kebutuhan Anda */
+   overflow-y: auto;
+}
+.hasil-data{
+  margin-left:50px;
+}
+.jenis{
+  position: relative;
+  top: 40px;
+
+}
+.jenis2{
+  position: relative;
+  left : 130px;
+  top: 20px;
+}
+.judul-konten{
+  position: relative;
+  left: 28px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.judul-konten2{
+  position: relative;
+  top: 0px;
+  left: -38px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.judul-konten3{
+  position: relative;
+  top: 0px;
+  left: -125px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.jenis-2{
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

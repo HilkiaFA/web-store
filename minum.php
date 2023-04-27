@@ -1,10 +1,3 @@
-<?php
-$conn = mysqli_connect("localhost", "rajuhanip", "rajuhanip", "db_kopsis");
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -13,12 +6,12 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="minum.css">
 </head>
 
 <body>
-	<header>
-		<h1 style="color:white; float: left; margin-left: 50px; margin-top: 30px;">Semua Barang</h1>
+<header>
+		<h1 style="color:white; float: left; margin-left: 50px; margin-top: 30px;">Makanan</h1>
 		<div>
 			<button onclick="openNav()"
 				style="background-color: transparent; border:0px; float:right; margin-top:34px; margin-right:25px; margin-left:10px;"><img
@@ -28,8 +21,8 @@ session_start();
 		<div class="navbar">
 			<ul>
 				<li><a style="color:white" href="index.html">Home</a></li>
+				<li><a style="color:white" href="index1.php">Semua Barang</a></li>
 				<li><a style="color:white" href="makanan.php">Makanan</a></li>
-				<li><a style="color:white" href="minum.php">Minuman</a></li>
 				<form method="POST" action="index1.php" style="float:right; margin-top:-2px;">
 					<li><input type="text" name="cari" id="cari"
 							style="border-radius:10px;border:0px ; margin-right:-30px; height:25px;"
@@ -41,8 +34,11 @@ session_start();
 			</ul>
 		</div>
 	</header>
+    <section class="nav">
+		<div></div>
+	</section>
 
-	<div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
 		<h2 style="margin-top:-45px; margin-bottom:50px; margin-left:40px;"><img src="./img/keranjang-buka.png"
 				style="width:27px;"> Keranjang Mas</h2>
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -70,17 +66,12 @@ session_start();
 	</form>
 	</div>
 
-	<section class="nav">
-		<div></div>
-	</section>
-
-
-<div id="produk-container-1">
+    <div id="produk-container-1">
 	<?php
 	if (isset($_POST['submit'])) {
 		// mencari nama barang pada tabel barang
 		$nama_barang = $_POST['cari'];
-		$sql = "SELECT * FROM tbl_product WHERE nama_produk LIKE '%$nama_barang%'";
+		$sql = "SELECT * FROM minum WHERE nama_barang LIKE '%$nama_barang%'";
 		$result = $conn->query($sql);
 
 		if (mysqli_num_rows($result) > 0) {
@@ -89,10 +80,10 @@ session_start();
 				?>
 				<div data-aos="fade-down" class="box-produk" style="border: 5px solid #C0C0C0;">
 					<form method="post"
-						action="tambah.php?nama_produk=<?php echo $row['nama_produk']; ?>&harga=<?php echo $harga; ?>">
+						action="tambah.php?nama_produk=<?php echo $row['nama_barang']; ?>&harga=<?php echo $harga; ?>">
 						<p style="font-size:17px; color:black; margin-left:50px;" class="jenis">Nama barang:</p>
 						<p style="font-size:17px; color:black; margin-left:50px; margin-top:-15px;" class="jenis">
-							<?php echo $row['nama_produk']; ?>
+							<?php echo $row['nama_barang']; ?>
 						</p>
 						<p style="font-size:17px; color:black; margin-left:50px;" class="jenis">Harga:</p>
 						<h2 style="font-size:17px;  color:#084382; margin-top:-15px; margin-left:50px;">
@@ -119,16 +110,16 @@ session_start();
 <div id="produk-container">
 		<?php
 		include 'config.php';
-		$produk = mysqli_query($conn, "SELECT * FROM tbl_product");
+		$produk = mysqli_query($conn, "SELECT * FROM minum");
 		while ($hasil = mysqli_fetch_array($produk)) {
 			$harga = $hasil['harga'];
 			?>
 			<div id="my-div" data-aos="fade-down" class="box-produk" style="border: 5px solid #C0C0C0;">
 				<form method="post"
-					action="tambah.php?nama_produk=<?php echo $hasil['nama_produk']; ?>&harga=<?php echo $harga; ?>">
+					action="tambah2.php?nama_produk=<?php echo $hasil['nama_barang']; ?>&harga=<?php echo $harga; ?>">
 					<p style="font-size:17px; color:black; margin-left:50px;">Nama barang:</p>
 					<p style="font-size:17px; color:black; margin-left:50px; margin-top:-15px;">
-						<?php echo $hasil['nama_produk']; ?>
+						<?php echo $hasil['nama_barang']; ?>
 					</p>
 					<p style="font-size:17px; color:black; margin-left:50px;">Harga:</p>
 					<h2 style="font-size:17px;  color:#084382; margin-top:-15px; margin-left:50px;">
@@ -158,7 +149,7 @@ session_start();
 		</div>
 	</footer>
 
-	<script>
+    <script>
 		const produkContainer = document.getElementById("produk-container");
 		const produkContainer1 = document.getElementById("produk-container-1");
 		const searchButton = document.getElementsByName("submit")[0];
@@ -185,5 +176,4 @@ session_start();
 		}
 	</script>
 </body>
-
 </html>

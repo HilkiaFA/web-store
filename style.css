@@ -15,6 +15,12 @@ body{
 	background-color: #eaf3ff;
 	overflow-x: hidden;
 }
+.judul{
+	color: white;
+	float: left; 
+	margin-left: 50px; 
+	margin-top: 30px;
+}
 header{
 	background-color: #014585;
 	width:100%;
@@ -210,3 +216,61 @@ footer{
 		left: 380px;
 	}
 }
+@media screen and (max-width:429px){
+	.gambar1{
+	   display: none;
+	}
+	.section{
+		width: 100%;
+		height: 900px;
+	}
+	.judul2{
+	   position: relative;
+	   left: 0px;
+	   top: 30px;
+	   text-align: center;
+	   }
+	   #arrows{
+		left: 100px;
+		bottom: -25px;
+	   }
+	   .keterangan{
+		   left: 0px;
+		   font-size: 25px; 
+		   top: 350px;
+	   }
+	   #tombol{
+		   bottom: -130px;
+		   left: 120px;
+	   }
+	   #gmb_cola{
+		display: none;
+		width: 120px; 
+		position: absolute; 
+		bottom: 0px; 
+		right: 80px;/* Nama animasi yang dibuat */
+	  animation: moveUpDown 3s ease-in-out infinite;
+	}
+	#gmb_chetato{
+		display: none ;
+		width: 100px; 
+		position: absolute; 
+		bottom: 0px; 
+		left: 80px;
+		animation: moveUpDown 3s ease-in-out infinite;
+	}
+	.navbar{
+		float: right;
+	}
+	li{
+		display: inline-flex;
+		margin-right: 40px;
+		margin-top: 15px;
+	}
+	.judul{
+		color: white;
+		float: left; 
+		margin-left: 100px; 
+		margin-top: 30px;
+	}
+   }
